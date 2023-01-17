@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1対1ビデオ通話</title>
+    <style type="text/css">
+        .container{
+            width: 1000px;
+        }
+        .main-wrapper{
+            height: 600px;
+        }
+        .my-section{
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+        .their-section{
+            float: right;
+            width: 50%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>ビデオ通話</h1>
+    <div class="container">
+        <div class="my-section">
+            <p class="my-id-label">自分のPeerID: <span id="my-id"></span></p>
+            <p>
+                <video id="their-video"  width="384px" height="216px" autoplay muted playsinline></video>
+            </p>
+                <!-- <video id="my-video" width="384px" height="216px" autoplay muted playsinline></video> -->
+            <label class="call-id-form-label" for="their-id">相手のPeerID: </label>
+            <input id="their-id" class="call-id-form">
+            <button type="button" id="call-btn">発信</button>
+            <!-- <video id="their-video"  width="384px" height="216px" autoplay muted playsinline></video> -->
+        </div>
+    </div>
+    <script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="//172.17.34.10/client/client.js"></script>
+</body>
+</html>
